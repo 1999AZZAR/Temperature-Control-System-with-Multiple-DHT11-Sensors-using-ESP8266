@@ -14,4 +14,25 @@ This folder contains the Arduino code for the slave board in the Temperature Con
 - The average temperature is sent to the master board over Wi-Fi.
 - The code repeats this process at regular intervals.
 
+## Flowchart
+
+```mermaid
+graph TD
+  A[Start] --> B[Initialize Serial Communication]
+  B --> C[Connect to Wi-Fi]
+  C --> D[Wait for Wi-Fi Connection]
+  D --> E[Print Slave IP Address]
+  E --> F[Initialize DHT Sensor]
+  F --> G[Start Wi-Fi Server]
+  G --> H[Print Initialization Message]
+  H --> I[Loop Start]
+  I --> J[Read Temperature]
+  J --> K[Check Reading Success]
+  K -- Yes --> L[Send Temperature to Master]
+  L --> M[Update Last Send Time]
+  M --> I
+  K -- No --> N[Print Error Message]
+  N --> I
+```
+
 Note: Make sure to update the IP address of the master board in the code to match your network configuration.
