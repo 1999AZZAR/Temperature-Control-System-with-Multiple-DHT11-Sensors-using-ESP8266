@@ -1,4 +1,7 @@
 # Temperature Control System with Multiple DHT11 Sensors using ESP8266
+
+[![CodeFactor](https://www.codefactor.io/repository/github/1999azzar/temperature-control-system-with-multiple-dht11-sensors-using-esp8266/badge)](https://www.codefactor.io/repository/github/1999azzar/temperature-control-system-with-multiple-dht11-sensors-using-esp8266)
+
 This repository contains code for a temperature control system implemented using Arduino and ESP8266 boards. The system utilizes multiple DHT11 sensors to measure temperature and applies PID control to maintain a desired setpoint temperature. The system consists of two components: the master board and the slave board. The master board performs temperature calculation and control, while the slave board collects temperature data from DHT11 sensors. The master and slave boards communicate with each other over Wi-Fi.
 
 ## Features
