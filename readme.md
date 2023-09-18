@@ -29,7 +29,11 @@ This repository contains code for a temperature control system implemented using
 
 ```mermaid
 graph TD
-  subgraph Master Board
+  style MasterBoard fill:#ffab91,stroke:#e64a19,stroke-width:4px;
+  style SlaveBoard fill:#e57373,stroke:#c62828,stroke-width:4px;
+  style Network fill:#ce93d8,stroke:#6a1b9a,stroke-width:5px,stroke-dasharray: 5, 5;
+
+  subgraph MasterBoard
     A[Start] --> B[Initialize Serial Communication]
     B --> C[Connect to Wi-Fi]
     C --> D[Wait for Wi-Fi Connection]
@@ -61,7 +65,7 @@ graph TD
     AA --> I
   end
   
-  subgraph Slave Board
+  subgraph SlaveBoard
     A1[Start] --> B1[Initialize Serial Communication]
     B1 --> C1[Connect to Wi-Fi]
     C1 --> D1[Wait for Wi-Fi Connection]
